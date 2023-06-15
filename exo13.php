@@ -20,19 +20,86 @@ véhicule.</p>
 <!-- ***********php******* -->
 <?php
 
-// Création de ma class 
-//Properties
-class Personne {
-    private string $marque;
-    private string $modéle;
-    private int $nbPortes;
-    private int $vitesseActuelle;
+class Voiture {
+    private $marque;
+    private $modele;
+    private $nbPortes;
+    private $vitesseActuelle;
+
+    public function __construct($marque, $modele, $nbPortes) {
+        $this->marque = $marque;
+        $this->modele = $modele;
+        $this->nbPortes = $nbPortes;
+        $this->vitesseActuelle = 0;
+    }
+
+    public function demarrer() {
+        echo "La voiture démarre.";
+    }
+
+    public function accelerer() {
+        echo "La voiture accélère.";
+        $this->vitesseActuelle += 10;
+    }
+
+    public function stopper() {
+        echo "La voiture s'arrête.";
+        $this->vitesseActuelle = 0;
+    }
+
+    public function getMarque() {
+        return $this->marque;
+    }
+
+    public function setMarque($marque) {
+        $this->marque = $marque;
+    }
+
+    public function getModele() {
+        return $this->modele;
+    }
+
+    public function setModele($modele) {
+        $this->modele = $modele;
+    }
+
+    public function getNbPortes() {
+        return $this->nbPortes;
+    }
+
+    public function setNbPortes($nbPortes) {
+        $this->nbPortes = $nbPortes;
+    }
+
+    public function getVitesseActuelle() {
+        return $this->vitesseActuelle;
+    }
+
+    public function setVitesseActuelle($vitesseActuelle) {
+        $this->vitesseActuelle = $vitesseActuelle;
+    }
+
+    public function afficherInfos() {
+        echo "Marque : " . $this->marque . "<br>";
+        echo "Modèle : " . $this->modele . "<br>";
+        echo "Nombre de portes : " . $this->nbPortes . "<br>";
+        echo "Vitesse actuelle : " . $this->vitesseActuelle . "<br>";
+    }
+
     
-    //Methods 
-
-
-
 }
+$v1 = new Voiture("Peugeot", "408", 5);
+$v2 = new Voiture("Citroën", "C4", 3);
+
+$v1->demarrer();
+$v1->accelerer();
+$v1->afficherInfos();
+$v2->demarrer();
+$v2->accelerer();
+$v2->accelerer();
+$v2->afficherInfos();
+$v2->stopper();
+$v2->afficherInfos();
 
 
 
