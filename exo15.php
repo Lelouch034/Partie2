@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>exo1</title>
+    <title>exo15</title>
 </head>
 <body>
     <h1>Exercice 15 </h1>
@@ -20,9 +20,9 @@ adresse e-mail a le bon format.</p>
 $email = "elan@elan-formation.fr";
 
 if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-  echo("$email is a valid email address");
+  echo("l'adresse $email est une adresse valide");
 } else {
-  echo("$email is not a valid email address");
+  echo("$email n'est pas une adresse valide");
 }
 
 ?>
