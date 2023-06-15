@@ -86,6 +86,9 @@ class Voiture {
         echo "Vitesse actuelle : " . $this->vitesseActuelle . "<br>";
     }
 
+    public function voitureStats() {
+        
+    }
     
 }
 $v1 = new Voiture("Peugeot", "408", 5);
