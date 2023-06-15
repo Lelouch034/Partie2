@@ -34,12 +34,12 @@ class Voiture {
     }
 
     public function demarrer() {
-        echo "La voiture démarre.";
+        echo "La voiture du modéle $this->marque $this->modele démarre.<br>";
     }
 
     public function accelerer() {
-        echo "La voiture accélère.";
-        $this->vitesseActuelle += 10;
+        echo "La voiture du modéle $this->marque $this->modele accélère.<br>";
+        $this->vitesseActuelle += 50;
     }
 
     public function stopper() {
@@ -86,12 +86,16 @@ class Voiture {
         echo "Vitesse actuelle : " . $this->vitesseActuelle . "<br>";
     }
 
-    public function voitureStats() {
-    }
+
+
+
+    
     
 }
 $v1 = new Voiture("Peugeot", "408", 5);
 $v2 = new Voiture("Citroën", "C4", 3);
+
+
 
 $v1->demarrer();
 $v1->accelerer();
