@@ -87,7 +87,6 @@ class Voiture {
     }
 
     public function voitureStats() {
-        
     }
     
 }
