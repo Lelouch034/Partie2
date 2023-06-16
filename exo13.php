@@ -123,23 +123,18 @@ class Voiture {
         
     }
 
-    public function ralentir() {
-        if($this->vitesseActuelle > 35) {
-              $this->vitesseActuelle = 3;
-        }
-    }
+  
+
+    
 
     public function afficherInfos() {
-        echo "Informations du véhicule  :<br>";
+        echo "Informations du véhicule $this->marque $this->modele :<br>";
         echo "Marque :  $this->marque<br>";
         echo "Modèle :  $this->modele <br>";
         echo "Nombre de portes :  $this->nbPortes<br>";
         echo "Vitesse actuelle :  $this->vitesseActuelle<br>";
     }
 
-    
-
-    
    
 }
 
@@ -157,11 +152,9 @@ $v1->accélération();
 echo  "<br>";
 $v1->vitesseActuelle();
 echo  "<br>";
-$v1->ralentir();
 echo  "<br>";
 $v1->afficherInfos();
 echo  "<br>";
-
 
 
 
