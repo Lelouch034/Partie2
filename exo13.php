@@ -123,8 +123,6 @@ class Voiture {
         
     }
 
-    
-
     public function afficherInfos() {
         echo "Informations du véhicule $this->marque $this->modele :<br>";
         echo "Marque :  $this->marque<br>";
@@ -132,6 +130,8 @@ class Voiture {
         echo "Nombre de portes :  $this->nbPortes<br>";
         echo "Vitesse actuelle :  $this->vitesseActuelle<br>";
     }
+
+    //Bonus : ajouter une méthode ralentir(vitesse) dans la classe Voiture.
 
    
 }
