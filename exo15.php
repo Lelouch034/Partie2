@@ -17,5 +17,12 @@ adresse e-mail a le bon format.</p>
 <!-- ***********php******* -->
 <?php
 
+$email = "elan@elan-formation.fr";
+
+if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+  echo("$email est une adresse e-mail valide");
+} else {
+  echo("$email n'est pas une adresse valide");
+}
 
 ?>
