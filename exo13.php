@@ -37,8 +37,6 @@ class Voiture {
         $this->voitureStatu = 0;
     }
     
-    
-
     public function getVoitureStatue(): int {
         return $this->voitureStatu;
     }
@@ -49,11 +47,27 @@ class Voiture {
     }
 
 
+    //savoir si la voiture démqrre ou non 
+
     public function statue() {
         $this->voitureStatu += (rand(0,1));
-        echo "Le statu de la voiture est $this->voitureStatu";        
+        if($this->voitureStatu == 0) {
+            echo "La voiture $this->marque $this->modele ne démarre pas";
+        } else {
+            echo $this->demarrer();
+        }       
     }
 
+    //fuction pour aceelerer 
+
+    public function accélération() {
+        if($this->voitureStatu == 1) {
+            echo $this->accelerer();
+        }else {
+            echo "La voiture $this->marque $this->modele veut accelerer <br>";
+            echo "Tu dois dabbord demarrer $this->marque $this->modele";
+        }
+    }
 
     
 
@@ -105,8 +119,14 @@ class Voiture {
 
     public function accelerer() {
         $this->vitesseActuelle += (rand(0,50));
-        echo "La voiture $this->marque $this->modele  accélère de $this->vitesseActuelle km /h";
+        echo "La voiture $this->marque $this->modele  accélère de $this->vitesseActuelle";
         
+    }
+
+    public function ralentir() {
+        if($this->vitesseActuelle > 35) {
+              $this->vitesseActuelle = 3;
+        }
     }
 
     public function afficherInfos() {
@@ -118,9 +138,7 @@ class Voiture {
     }
 
     
-if (condition) {
-    # code...
-}
+
     
    
 }
@@ -131,25 +149,35 @@ if (condition) {
 $v1 = new Voiture("Peugeot", "408", 5);
 $v2 = new Voiture("Citroen", "C4", 3);
 
-$v1->afficherInfos();
-$v1->demarrer();
+
+
+$v1->statue();
 echo  "<br>";
-$v1->accelerer();
+$v1->accélération();
 echo  "<br>";
 $v1->vitesseActuelle();
 echo  "<br>";
-//a enlever
-$v1->statue();
+$v1->ralentir();
+echo  "<br>";
+$v1->afficherInfos();
+echo  "<br>";
+
 
 
 
 echo"<br>";
 
+
+
+
+$v2->statue();
+echo  "<br>";
+$v2->accélération();
+echo  "<br>";
+$v2->vitesseActuelle();
+echo  "<br>";
+echo  "<br>";
 $v2->afficherInfos();
-echo"<br>";
-$v2->demarrer();
-echo"<br>";
-$v2->accelerer();
 
 
 
