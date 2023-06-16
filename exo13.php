@@ -55,6 +55,8 @@ class Voiture {
     }
 
 
+    
+
     public function getMarque(): string {
         return $this->marque;
     }
@@ -114,11 +116,16 @@ class Voiture {
         echo "Nombre de portes :  $this->nbPortes<br>";
         echo "Vitesse actuelle :  $this->vitesseActuelle<br>";
     }
+
     
-
-
+if (condition) {
+    # code...
 }
-$gg = "bonjour";
+    
+   
+}
+
+
 
 
 $v1 = new Voiture("Peugeot", "408", 5);
