@@ -41,7 +41,6 @@ class Voiture {
 }
 
  
-
 class VoitureElec extends Voiture {
     public int $autonomie;
 
