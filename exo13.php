@@ -29,7 +29,6 @@ class Voiture {
 
   
 
-
     public function __construct( string $marque, string $modele, int $nbPortes) {
         $this->marque = $marque;
         $this->modele = $modele;
@@ -44,18 +43,17 @@ class Voiture {
         return $this->voitureStatu;
     }
    
-    public function setVoitureStatue($voitureStatue): int {
-       return $this->voitureStatu = (rand(0,1));;
+    public function setVoitureStatue($voitureStatu) {
+        $this->voitureStatu = $voitureStatu;
+       
     }
 
 
     public function statue() {
-        echo "Le statu de la voiture est $this->voitureStatu";
-        return $this->voitureStatu;
+        $this->voitureStatu += (rand(0,1));
+        echo "Le statu de la voiture est $this->voitureStatu";        
     }
 
-    
-   
 
     public function getMarque(): string {
         return $this->marque;
@@ -109,8 +107,6 @@ class Voiture {
         
     }
 
-    
-
     public function afficherInfos() {
         echo "Informations du véhicule  :<br>";
         echo "Marque :  $this->marque<br>";
@@ -118,10 +114,11 @@ class Voiture {
         echo "Nombre de portes :  $this->nbPortes<br>";
         echo "Vitesse actuelle :  $this->vitesseActuelle<br>";
     }
- 
+    
+
 
 }
-
+$gg = "bonjour";
 
 
 $v1 = new Voiture("Peugeot", "408", 5);
@@ -135,7 +132,7 @@ echo  "<br>";
 $v1->vitesseActuelle();
 echo  "<br>";
 //a enlever
-
+$v1->statue();
 
 
 
@@ -144,6 +141,8 @@ echo"<br>";
 $v2->afficherInfos();
 echo"<br>";
 $v2->demarrer();
+echo"<br>";
+$v2->accelerer();
 
 
 
