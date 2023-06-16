@@ -123,8 +123,6 @@ class Voiture {
         
     }
 
-  
-
     
 
     public function afficherInfos() {
