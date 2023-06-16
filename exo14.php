@@ -50,7 +50,6 @@ class VoitureElec extends Voiture {
         $this->autonomie = $autonomie;
     }
 
-
     public function afficherInfos() {
        echo "Autonomie : $this->autonomie";
     }

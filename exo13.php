@@ -130,13 +130,10 @@ class Voiture {
         echo "Nombre de portes :  $this->nbPortes<br>";
         echo "Vitesse actuelle :  $this->vitesseActuelle<br>";
     }
-
+    
     //Bonus : ajouter une méthode ralentir(vitesse) dans la classe Voiture.
 
-   
 }
-
-
 
 $v1 = new Voiture("Peugeot", "408", 5);
 $v2 = new Voiture("Citroen", "C4", 3);
