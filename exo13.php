@@ -139,7 +139,7 @@ class Voiture {
 
 
 $v1 = new Voiture("Peugeot", "408", 5);
-$v2 = new Voiture("Citroen", "C4", 3);
+$v2 = new Voiture("Citroen", "C4", 4);
 
 
 
