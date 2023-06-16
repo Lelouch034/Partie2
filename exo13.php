@@ -25,37 +25,91 @@ class Voiture {
     public string $modele;
     public int $nbPortes;
     public int $vitesseActuelle;
-    public int $voitureStatue;
+    public int $voitureStatu;
+
+  
 
 
-
-    public function __construct($marque, $modele, $nbPortes) {
+    public function __construct( string $marque, string $modele, int $nbPortes) {
         $this->marque = $marque;
         $this->modele = $modele;
         $this->nbPortes = $nbPortes;
         $this->vitesseActuelle = 0;
-        $this->voitureStatue = 0;
+        $this->voitureStatu = 0;
+    }
+    
+    
+
+    public function getVoitureStatue(): int {
+        return $this->voitureStatu;
+    }
+   
+    public function setVoitureStatue($voitureStatue): int {
+       return $this->voitureStatu = (rand(0,1));;
     }
 
-    public function stats(){
 
+    public function statue() {
+        echo "Le statu de la voiture est $this->voitureStatu";
+        return $this->voitureStatu;
     }
 
+    
+   
+
+    public function getMarque(): string {
+        return $this->marque;
+    }
+
+    public function setMarque($marque) {
+        $this->marque = $marque;
+    }
+
+    public function getModele(): string {
+        return $this->modele;
+    }
+
+    public function setModele($modele){
+        $this->modele = $modele;
+    }
+
+    public function getNbPortes(): int {
+        return $this->nbPortes;
+    }
+
+    public function setNbPortes($nbPortes) {
+        $this->nbPortes = $nbPortes;
+    }
+
+    public function getVitesseActuelle(): int {
+        return $this->vitesseActuelle;
+    }
+
+    public function setVitesseActuelle($vitesseActuelle) {
+        $this->vitesseActuelle = $vitesseActuelle;
+    }
+
+    public function vitesseActuelle() {
+        echo "La vitesse de la  $this->marque $this->modele est de $this->vitesseActuelle km /h";
+    }
 
     public function demarrer() {
-        echo "La voiture demarre";
+        echo "La voiture $this->marque  $this->modele démarre";
         
-    }
-
-    public function accelerer() {
-        echo "La voiture accelere";
-        $this->vitesseActuelle += 50;
     }
 
     public function stopper() {
         echo "la voiture s'arrête";
         $this->vitesseActuelle = 0;
     }
+
+    public function accelerer() {
+        $this->vitesseActuelle += (rand(0,50));
+        echo "La voiture $this->marque $this->modele  accélère de $this->vitesseActuelle km /h";
+        
+    }
+
+    
 
     public function afficherInfos() {
         echo "Informations du véhicule  :<br>";
@@ -64,52 +118,32 @@ class Voiture {
         echo "Nombre de portes :  $this->nbPortes<br>";
         echo "Vitesse actuelle :  $this->vitesseActuelle<br>";
     }
-    
-    
-
-    public function getMarque() {
-        return $this->marque;
-    }
-
-    public function setMarque($marque) {
-        $this->marque = $marque;
-    }
-
-    public function getModele() {
-        return $this->modele;
-    }
-
-    public function setModele($modele) {
-        $this->modele = $modele;
-    }
-
-    public function getNbPortes() {
-        return $this->nbPortes;
-    }
-
-    public function setNbPortes($nbPortes) {
-        $this->nbPortes = $nbPortes;
-    }
-
-    public function getVitesseActuelle() {
-        return $this->vitesseActuelle;
-    }
-
-    public function setVitesseActuelle($vitesseActuelle) {
-        $this->vitesseActuelle = $vitesseActuelle;
-    }
+ 
 
 }
+
+
 
 $v1 = new Voiture("Peugeot", "408", 5);
 $v2 = new Voiture("Citroen", "C4", 3);
 
 $v1->afficherInfos();
+$v1->demarrer();
+echo  "<br>";
+$v1->accelerer();
+echo  "<br>";
+$v1->vitesseActuelle();
+echo  "<br>";
+//a enlever
+
+
 
 
 echo"<br>";
 
 $v2->afficherInfos();
+echo"<br>";
+$v2->demarrer();
 
 
 
