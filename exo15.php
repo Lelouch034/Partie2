@@ -24,5 +24,4 @@ if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
 } else {
   echo("$email n'est pas une adresse valide");
 }
-
 ?>
